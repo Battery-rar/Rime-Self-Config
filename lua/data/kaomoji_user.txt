@@ -1,0 +1,6 @@
+# format:
+# keyword<TAB>kaomoji
+#
+# examples:
+# 开心	(≧▽≦)
+# 摸摸头	( ´･･)ﾉ(._.`)
