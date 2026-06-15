@@ -1,0 +1,69 @@
+patch:
+  # 修改 Super Tips 核心参数
+  super_tips/tips_key: "comma"           # 默认逗号，可改为 "period", "semicolon" 等
+  super_tips/disabled_types:             # 在下方列表内填入你想禁用的类型
+    
+  # 追加用户自己的 tips 文件
+  super_tips/files/+:
+    - lua/data/my_tips.txt
+    
+  kaomoji:
+    files:
+      - lua/data/kaomoji.txt       # 仍可保留默认文件
+      - lua/data/kaomoji_user.txt  # 用户自定义文件，其他的内部解决
+      
+  switches/@0/states: [ 中文 ]
+  switches/@3/reset: 1  #表情
+  switches/@10/reset: 1  #超级提示
+  # @7 代表在 switches 的第8组里加入 reset: 1 参数,即可长期启用
+  
+  custom_phrase/user_dict: custom_phrase
+  
+  engine/translators/+:
+    - lua_translator@*wanxiang.kaomoji
+    
+  recognizer/patterns/+:
+    kaomoji: "^/km[A-Za-z7890]*$"
+  
+  super_replacer/rules/@2/files/+:
+    - lua/data/my_others.txt
+      
+  speller/algebra/+:
+    - derive/([ei])n$/$1ng/                                   # en→eng, in→ing
+    - derive/([ei])ng$/$1n/                                   # eng→en, ing→in
+    - derive/([aeiou])ng$/$1gn/                               # ng顺序错误：dang→dagn
+    - derive/([dtngkhrzcs])o(u|ng)$/$1o/                      # o模糊音：zho→zhou/zhong
+    - derive/ong$/on/                                         # ong→on
+    - derive/([dtnl])ei$/$1ie/
+    - derive/([dtnl])ie$/$1ei/
+    - derive/^([wghk])ai$/$1ia/                               # ai→ia
+    - derive/([qjx])ia$/$1ai/                                 # ia→ai
+    - derive/([rtypsdghklzcbnm])ao$/$1oa/                     # ao→oa
+    - derive/([ypfm])ou$/$1uo/                                # ou→uo
+    - derive/([wrtypsdfghklzcbnm])an$/$1na/                   # an→na
+    - derive/([wrtpsdfghklzcbnm])eng$/$1neg/                  # eng→neg
+    - derive/([wrtpsdfghklzcbnm])eng$/$1egn/                  # eng→egn
+    - derive/([rtypsdfghklzcbnm])ong$/$1nog/                  # ong→nog
+    - derive/([rtypsdfghklzcbnm])ong$/$1ogn/                  # ong→ogn
+    - derive/([zcs])h(a|e|i|u|ai|ei|an|en|ou|uo|ua|un|ui|uan|uai|uang|ang|eng|ong)$/h$1$2/ # zh/ch/sh首字母误置
+    - derive/([zcs])h([aeiu])$/$1$2h/                         # zha→zah
+    - derive/^([xjqnl])iagn$/$1iang/                          # ia/ng顺序错误
+    - derive/^([xjqnl])iang$/$1iagn/                          # iang→iagn
+    - derive/^([xjqnl])aing$/$1iang/                          # ai/ng顺序错误
+    - derive/^([xjqnl])iang$/$1aing/                          # iang→aing
+    - derive/^([xjqnl])oing$/$1iong/                          # io/ng顺序错误
+    - derive/^([xjqnl])iong$/$1oing/                          # iong→oing
+    - derive/^((?:zh|ch|sh)|[gkhzcs])uagn$/$1uang/            # ua/ng顺序错误
+    - derive/^((?:zh|ch|sh)|[gkhzcs])uang$/$1uagn/            # uang→uagn
+    - derive/^([bpmdtnljqx])iau$/$1iao/                       # iao↔iau
+    - derive/^([bpmdtnljqx])iao$/$1iau/                       # iao↔iau
+    - derive/^((?:zh|ch|sh)|[gkh])uia$/$1uai/                 # uai↔uia
+    - derive/^((?:zh|ch|sh)|[gkh])uai$/$1uia/                 # uai↔uia
+    - derive/^([bpmfdtnlgkhjqxrzcsyw])oa$/$1ao/               # oa↔ao
+    - derive/^([bpmfdtnlgkhjqxrzcsyw])ao$/$1oa/               # oa↔ao
+    - derive/^([bpmfdtgkhjqxrzcsyw])na$/$1an/                 # na↔an
+    - derive/^([bpmfdtgkhjqxrzcsyw])an$/$1na/                 # na↔an
+    - derive/^([bpmfdtgkhjqxrzcsyw])ne$/$1en/                 # ne↔en
+    - derive/^([bpmfdtgkhjqxrzcsyw])en$/$1ne/                 # ne↔en
+    - abbrev/^([a-z]).+$/$1/                                  # 单字母简拼
+    - abbrev/^([zcs]h).+$/$1/                                 # zh/ch/sh简拼

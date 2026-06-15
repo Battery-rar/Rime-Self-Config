@@ -1,0 +1,71 @@
+# Rime user dictionary
+#@/db_name	en
+#@/db_type	userdb
+#@/rime_version	1.16.0
+#@/tick	81
+#@/user_id	982942fe-0717-4e43-9872-f4be6f6ffdb7
+AA 	AA	c=1 d=0.814647 t=81
+AI 	AI	c=1 d=0.960789 t=81
+C# 	C#	c=2 d=1.76955 t=81
+C++ 	C++	c=2 d=1.70003 t=81
+Chromium 	Chromium	c=4 d=3.46011 t=81
+GPT 	GPT	c=1 d=0.927743 t=81
+Gemini 	Gemini	c=1 d=0.790571 t=81
+GitHub 	GitHub	c=5 d=4.87755 t=79
+Google 	Google	c=1 d=0.980199 t=81
+IDE 	IDE	c=1 d=0.822835 t=81
+JavaScript 	JavaScript	c=1 d=0.852144 t=81
+MacBook 	MacBook	c=1 d=0.937067 t=81
+MagSafe 	MagSafe	c=1 d=0.932393 t=81
+Microsoft 	Microsoft	c=1 d=1 t=80
+PR 	PR	c=1 d=1 t=60
+PayPal 	PayPal	c=2 d=1.76059 t=81
+QAQ 	QAQ	c=2 d=1.56933 t=81
+QQ 	QQ	c=2 d=1.76104 t=81
+Shadowrocket 	Shadowrocket	c=1 d=1 t=68
+UA 	UA	c=2 d=1.77009 t=81
+UI 	UI	c=1 d=0.95123 t=81
+URI 	URI	c=1 d=1 t=63
+US 	US	c=1 d=0.913931 t=81
+UTC 	UTC	c=1 d=0.97531 t=81
+VA 	VA	c=4 d=3.35968 t=81
+VSCode 	VSCode	c=1 d=1 t=58
+Wi-Fi 	Wi-Fi	c=2 d=1.71832 t=81
+algebra 	algebra	c=1 d=1 t=75
+anonymous 	anonymous	c=1 d=0.831104 t=81
+blurred 	blurred	c=1 d=1 t=81
+chain 	chain	c=1 d=1 t=67
+commit 	commit	c=1 d=1 t=76
+decrease 	decrease	c=1 d=0.873716 t=81
+deep 	deep	c=1 d=0.810584 t=81
+dial-up 	dial-up	c=1 d=0.918513 t=81
+dramatic 	dramatic	c=1 d=1 t=59
+enmesh 	enmesh	c=1 d=0.869358 t=81
+eof 	eof	c=1 d=0.878096 t=81
+excellent 	excellent	c=1 d=0.865022 t=81
+fork 	fork	c=1 d=1 t=61
+i18n 	i18n	c=1 d=0.904837 t=81
+iPodClassic 	iPod Classic	c=1 d=0.847893 t=81
+if 	if	c=2 d=1.97516 t=81
+ii 	ii	c=1 d=1 t=55
+impromptu 	impromptu	c=1 d=1 t=81
+intuition 	intuition	c=1 d=0.856415 t=81
+ipad 	iPad	c=1 d=1 t=56
+irrational 	irrational	c=1 d=0.886921 t=81
+iwis 	iwis	c=1 d=1 t=62
+log 	log	c=1 d=0.946486 t=81
+media 	media	c=1 d=0.822835 t=81
+mos 	mos	c=1 d=0.965606 t=81
+nonsense 	nonsense	c=1 d=0.818731 t=81
+owo 	owo	c=2 d=1.60103 t=81
+product 	product	c=1 d=0.83527 t=81
+qaq 	QAQ	c=1 d=0.798516 t=81
+recognizer 	recognizer	c=4 d=3.92595 t=77
+replacer 	replacer	c=1 d=0.970446 t=81
+snippet 	snippet	c=1 d=1 t=57
+super 	super	c=2 d=1.76218 t=81
+tool 	tool	c=2 d=1.99501 t=66
+unordered 	unordered	c=1 d=0.97531 t=81
+us 	us	c=2 d=1.87912 t=81
+weasel 	weasel	c=1 d=0.794533 t=81
+windows 	Windows	c=1 d=0.995012 t=81

@@ -1,6 +1,11 @@
 patch:
-  ascii_composer/good_old_caps_lock: true
-  ascii_composer/switch_key/Caps_Lock: noop
-  ascii_composer/switch_key/Shift_L: noop
-  ascii_composer/switch_key/Shift_R: noop
+  ascii_composer:
+  #ascii_composer/good_old_caps_lock:
+  #ascii_composer/switch_key:
+  
+  #ascii_composer/switch_key/Caps_Lock: noop
+  #ascii_composer/switch_key/Shift_L: noop
+  #ascii_composer/switch_key/Shift_R: noop
+  #ascii_composer/switch_key/Control_L: noop
+  #ascii_composer/switch_key/Control_R: noop
 

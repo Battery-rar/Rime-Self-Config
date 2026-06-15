@@ -12,13 +12,36 @@ patch:
       - lua/data/kaomoji.txt       # 仍可保留默认文件
       - lua/data/kaomoji_user.txt  # 用户自定义文件，其他的内部解决
       
-  switches/@0/states: [ 中文 ]
+  switches/@0: 
   switches/@3/reset: 1  #表情
-  switches/@10/reset: 0  #超级提示
+  switches/@10/reset: 1  #超级提示
   # @7 代表在 switches 的第8组里加入 reset: 1 参数,即可长期启用
   
-  custom_phrase/user_dict: my_phrase
+  custom_phrase/user_dict: custom_phrase
   
+  engine/processors:
+    - lua_processor@*wanxiang.super_processor
+    - lua_processor@*wanxiang.user_predict*P
+    - lua_processor@*wanxiang.partial_commit
+    - lua_processor@*wanxiang.super_tips
+    - lua_processor@*wanxiang.super_sequence*P
+    - recognizer
+    - key_binder
+    - lua_processor@*wanxiang.key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+    
+  engine/segmentors:
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@wanxiang_reverse
+    - affix_segmentor@add_user_dict
+    - punct_segmentor
+    - fallback_segmentor
+    
   engine/translators/+:
     - lua_translator@*wanxiang.kaomoji
     

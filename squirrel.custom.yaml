@@ -55,3 +55,5 @@ patch:
       text_color: 0xBFCCCCCC                    # 浅灰色预编辑文字
       hilited_text_color: 0xBF999999            # 略深的高亮预编辑文字
       # --- 暗色模式调整结束 ---
+  
+  app_options:

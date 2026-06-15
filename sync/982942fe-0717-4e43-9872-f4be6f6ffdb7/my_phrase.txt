@@ -1,0 +1,80 @@
+# 【万象候选动态格式化说明】
+# --------------------------------------------------
+# 1. 时间占位 ( \ + 字母 )
+# \T:时辰(午时)  \K:刻(三刻)
+# \Y:年(2025)    \y:年(25)     \m:月(01)    \N:月(1)
+# \d:日(09)      \j:日(9)      \H:时(08)    \G:时(8)
+# \I:时(12h)     \l:时(12h不带零) \W:星期几    \w:周几
+# \M:分(05)      \S:秒(09)     \p:am/pm     \P:AM/PM
+# \O:时区(+08:00) \o:时区(+0800) \A:凌晨/上午/中午/下午/晚上
+# --------------------------------------------------
+# 2. 数量重复 ( 字符 + \ + 数字 )
+# a\3 => aaa     哈\2 => 哈哈     !\10 => !!!!!
+# --------------------------------------------------
+# 3. 基础转义
+# \n : 换行符    \s : 空格    \t : 制表符
+# [[...]] : 区块内不转义 (如: [[\Y]] 输出 \Y)
+# --------------------------------------------------
+# 示例: 编码 csck -> 此时此刻：\T\K  =>  此时此刻：午时三刻
+# 提示: 本逻辑已支持通过 lua/data/other.txt 等外部文件引入实现孪生候选
+吧	b	5
+哈\5	hhhhh	5
+静夜思\n\s\3李白\n床前明月光\n疑似地上霜\n举头望明月\n低头思故乡	jys	5
+错过的暑假可以放第二次吗	cse	5
+修改时间\Y-\m-\d	xgsj	5
+OwO	owo	5
+QAQ	qaq	5
+OvO	ovo	5
+TAT	tat	5
+UwU	uwu	5
+QwQ	qwq	5
+—w—	ww	5
+xwx	xwx	5
+Ciallo～(∠・ω< )⌒★	ciallo	5
+Ciallo～(∠・ω< )⌒★	Ciallo	5
+o.o	oo	8
+O.o	oo	7
+o.O	oo	6
+O.O	oo	5
+の	zhi	5
+の	no	5
+x)	xx	5
+w\3	w	4
+f**k	fuck	3
+f**k	fk	3
+F**k	Fuck	3
+F**k	Fk	3
+fuck	fk	3
+Fuck	Fk	3
+卧槽	woc	5
+收到	sd	5
+好的	hd	5
+确实如此	qs	5
+有道理	ydl	5
+辛苦了	xkl	5
+哈哈哈哈哈哈	hhh	5
+笑死我了	xswl	5
+绷不住了	bbz	5
+太典了	tdl	5
+哈\10	h10	5
+嘿\10	hei10	5
+草\5	c5	5
+啊\20	a20	5
+6\20	666	5
+@gmail.com	gmail	5
+@qq.com	qq	5
+@outlook.com	outlook	5
+```	code	5
+# 	title1	5
+## 	title2	5
+### 	title3	5
+- 	li	5
+[]()	link	5
+ChatGPT	gpt	5
+Claude	claude	5
+Gemini	gemini	5
+DeepSeek	ds	5
+Ninajirachi	nina	5
+Porter Robinson pr	5
+Avicii	av	5
+◢ ◤	av	5

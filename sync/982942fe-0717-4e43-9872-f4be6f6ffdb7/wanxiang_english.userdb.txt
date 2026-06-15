@@ -1,0 +1,16 @@
+# Rime user dictionary
+#@/db_name	wanxiang_english
+#@/db_type	userdb
+#@/rime_version	1.16.0
+#@/tick	12
+#@/user_id	982942fe-0717-4e43-9872-f4be6f6ffdb7
+ARM 	ARM	c=1 d=1 t=7
+CrossOver 	CrossOver	c=1 d=1 t=4
+Negro 	Negro	c=1 d=1 t=8
+abandon 	abandon	c=1 d=1 t=12
+iPhone 	iPhone	c=2 d=1.98511 t=9
+inseparable 	inseparable	c=1 d=1 t=1
+macOS 	macOS	c=1 d=1 t=5
+midi 	midi	c=1 d=1 t=11
+squirrel 	squirrel	c=1 d=1 t=2
+subjects 	subjects	c=1 d=1 t=3
