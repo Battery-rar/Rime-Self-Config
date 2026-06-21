@@ -1,13 +1,13 @@
 __build_info:
   rime_version: 1.16.0
   timestamps:
-    default: 1781532090
-    default.custom: 1781534526
-    wanxiang.custom: 1781534163
-    wanxiang.schema: 1781532090
-    wanxiang_algebra: 1781532090
+    default: 1781802923
+    default.custom: 1782026269
+    wanxiang.custom: 1782030666
+    wanxiang.schema: 1781802923
+    wanxiang_algebra: 1781802923
     wanxiang_algebra.custom: 0
-    wanxiang_symbols: 1781532090
+    wanxiang_symbols: 1781802923
     wanxiang_symbols.custom: 0
 add_user_dict:
   dictionary: wanxiang
@@ -1087,7 +1087,7 @@ recognizer:
     sjc: "^[/o]rc\\d+[-+=op]?$"
     unicode: "^U[a-f0-9]+"
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$"
-    wanxiang_reverse: "^`[A-Za-z]*$"
+    wanxiang_reverse: "^`[A-Za-z;]*$"
     yr1: "^N0[1-9]?0?[1-9]?"
     yr2: "^N1[02]?0?[1-9]?"
     yr3: "^N0[1-9]?[1-2]?[1-9]?"
@@ -1198,44 +1198,8 @@ speller:
     - "derive/([jqx])iong$/$1oign/"
     - "derive/ong$/on/"
     - "derive/([tl])eng$/$1en/"
-    - "derive/([ei])n$/$1ng/"
-    - "derive/([ei])ng$/$1n/"
-    - "derive/([aeiou])ng$/$1gn/"
-    - "derive/([dtngkhrzcs])o(u|ng)$/$1o/"
-    - "derive/ong$/on/"
-    - "derive/([dtnl])ei$/$1ie/"
-    - "derive/([dtnl])ie$/$1ei/"
-    - "derive/^([wghk])ai$/$1ia/"
-    - "derive/([qjx])ia$/$1ai/"
-    - "derive/([rtypsdghklzcbnm])ao$/$1oa/"
-    - "derive/([ypfm])ou$/$1uo/"
-    - "derive/([wrtypsdfghklzcbnm])an$/$1na/"
-    - "derive/([wrtpsdfghklzcbnm])eng$/$1neg/"
-    - "derive/([wrtpsdfghklzcbnm])eng$/$1egn/"
-    - "derive/([rtypsdfghklzcbnm])ong$/$1nog/"
-    - "derive/([rtypsdfghklzcbnm])ong$/$1ogn/"
-    - "derive/([zcs])h(a|e|i|u|ai|ei|an|en|ou|uo|ua|un|ui|uan|uai|uang|ang|eng|ong)$/h$1$2/"
-    - "derive/([zcs])h([aeiu])$/$1$2h/"
-    - "derive/^([xjqnl])iagn$/$1iang/"
-    - "derive/^([xjqnl])iang$/$1iagn/"
-    - "derive/^([xjqnl])aing$/$1iang/"
-    - "derive/^([xjqnl])iang$/$1aing/"
-    - "derive/^([xjqnl])oing$/$1iong/"
-    - "derive/^([xjqnl])iong$/$1oing/"
-    - "derive/^((?:zh|ch|sh)|[gkhzcs])uagn$/$1uang/"
-    - "derive/^((?:zh|ch|sh)|[gkhzcs])uang$/$1uagn/"
-    - "derive/^([bpmdtnljqx])iau$/$1iao/"
-    - "derive/^([bpmdtnljqx])iao$/$1iau/"
-    - "derive/^((?:zh|ch|sh)|[gkh])uia$/$1uai/"
-    - "derive/^((?:zh|ch|sh)|[gkh])uai$/$1uia/"
-    - "derive/^([bpmfdtnlgkhjqxrzcsyw])oa$/$1ao/"
-    - "derive/^([bpmfdtnlgkhjqxrzcsyw])ao$/$1oa/"
-    - "derive/^([bpmfdtgkhjqxrzcsyw])na$/$1an/"
-    - "derive/^([bpmfdtgkhjqxrzcsyw])an$/$1na/"
-    - "derive/^([bpmfdtgkhjqxrzcsyw])ne$/$1en/"
-    - "derive/^([bpmfdtgkhjqxrzcsyw])en$/$1ne/"
-    - "abbrev/^([a-z]).+$/$1/"
-    - "abbrev/^([zcs]h).+$/$1/"
+    - "derive/([i])n$/$1ng/"
+    - "derive/([i])ng$/$1n/"
   alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA1234567890`;/\\›"
   delimiter: " '"
   initials: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA/›"
@@ -1338,6 +1302,8 @@ translator:
   initial_quality: 3
   max_homophones: 8
   max_word_length: 7
+  packs:
+    - user
   spelling_hints: 30
 user_dict_set:
   contextual_suggestions: false

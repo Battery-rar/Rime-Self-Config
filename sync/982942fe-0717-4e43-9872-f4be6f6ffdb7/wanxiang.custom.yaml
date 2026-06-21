@@ -1,39 +1,45 @@
 patch:
+  #——————————功能开关——————————
+  switches/@0:
+  switches/@3/reset: 1  #表情
+  switches/@10/reset: 1  #超级提示
+  # @7 代表在 switches 的第8组里加入 reset: 1 参数,即可长期启用
+  
+  #——————————Super Tips——————————
   # 修改 Super Tips 核心参数
   super_tips/tips_key: "comma"           # 默认逗号，可改为 "period", "semicolon" 等
   super_tips/disabled_types:             # 在下方列表内填入你想禁用的类型
     
-  # 追加用户自己的 tips 文件
+  #追加用户自己的 tips 文件
   super_tips/files/+:
     - lua/data/my_tips.txt
-    
+  
+  #——————————Kaomoji——————————
   kaomoji:
     files:
       - lua/data/kaomoji.txt       # 仍可保留默认文件
       - lua/data/kaomoji_user.txt  # 用户自定义文件，其他的内部解决
       
-  switches/@0/states: [ 中文 ]
-  switches/@3/reset: 1  #表情
-  switches/@10/reset: 1  #超级提示
-  # @7 代表在 switches 的第8组里加入 reset: 1 参数,即可长期启用
-  
-  custom_phrase/user_dict: custom_phrase
-  
   engine/translators/+:
     - lua_translator@*wanxiang.kaomoji
     
   recognizer/patterns/+:
     kaomoji: "^/km[A-Za-z7890]*$"
   
+  #用户词库
+  translator/packs/+:
+    - user
+    
   super_replacer/rules/@2/files/+:
     - lua/data/my_others.txt
-      
+    
+  custom_phrase/user_dict: custom_phrase
+  
+  #——————————模糊音&纠错——————————
   speller/algebra/+:
-    - derive/([ei])n$/$1ng/                                   # en→eng, in→ing
-    - derive/([ei])ng$/$1n/                                   # eng→en, ing→in
+    - derive/([i])n$/$1ng/                                   # en→eng, in→ing
+    - derive/([i])ng$/$1n/                                   # eng→en, ing→in
     - derive/([aeiou])ng$/$1gn/                               # ng顺序错误：dang→dagn
-    - derive/([dtngkhrzcs])o(u|ng)$/$1o/                      # o模糊音：zho→zhou/zhong
-    - derive/ong$/on/                                         # ong→on
     - derive/([dtnl])ei$/$1ie/
     - derive/([dtnl])ie$/$1ei/
     - derive/^([wghk])ai$/$1ia/                               # ai→ia
@@ -66,4 +72,28 @@ patch:
     - derive/^([bpmfdtgkhjqxrzcsyw])ne$/$1en/                 # ne↔en
     - derive/^([bpmfdtgkhjqxrzcsyw])en$/$1ne/                 # ne↔en
     - abbrev/^([a-z]).+$/$1/                                  # 单字母简拼
-    - abbrev/^([zcs]h).+$/$1/                                 # zh/ch/sh简拼
+  
+  #——————————修改Processors&Segmentors以删除英语功能——————————
+  engine/processors:
+    - lua_processor@*wanxiang.super_processor
+    - lua_processor@*wanxiang.user_predict*P
+    - lua_processor@*wanxiang.partial_commit
+    - lua_processor@*wanxiang.super_tips
+    - lua_processor@*wanxiang.super_sequence*P
+    - recognizer
+    - key_binder
+    - lua_processor@*wanxiang.key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+    
+  engine/segmentors:
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@wanxiang_reverse
+    - affix_segmentor@add_user_dict
+    - punct_segmentor
+    - fallback_segmentor
+    

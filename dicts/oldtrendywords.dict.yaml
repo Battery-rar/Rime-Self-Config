@@ -1,0 +1,77 @@
+# encoding utf-8
+# rime dictionary
+# ------旧时流行语词库-------
+# --目前加入的与主词库不构成干扰--
+---
+name: oldtrendywords
+version: "LTS"
+sort: by_weight
+...
+白白	bái bái	1
+板凳	bǎn dèng	1
+板斧	bǎn fǔ	1
+斑竹	bān zhú	1
+本命	běn mìng	1
+博客	bó kè	1
+菜鸟	cài niǎo	1
+残念	cán niàn	1
+纯净水	chún jìng shuǐ	1
+达人	dá rén	1
+大虾	dà xiā	1
+耽美	dān měi	1
+地板	dì bǎn	1
+粉丝	fěn sī	1
+灌水	guàn shuǐ	1
+鬼畜	guǐ chù	1
+果酱	guǒ jiàng	1
+好康	hǎo kāng	1
+轰杀	hōng shā	1
+几楼的	jǐ lóu de	1
+酱紫	jiàng zǐ	1
+姐贵	jiě guì	1
+囧到	jiǒng dào	1
+剧场版	jù chǎng bǎn	1
+恐龙	kǒng lóng	1
+狼族	láng zú	1
+老大	lǎo dà	1
+雷倒	léi dào	1
+蕾丝	lěi sī	1
+楼上的	lóu shàng de	1
+楼主	lóu zhǔ	1
+路过	lù guò	1
+马甲	mǎ jiǎ	1
+美眉	měi méi	1
+木有	mù yǒu	1
+年下攻	nián xià gōng	1
+女王	nǚ wáng	1
+欧巴桑	ōu bā sāng	1
+偶滴	ǒu dī	1
+拍砖头	pāi zhuān tóu	1
+抛砖	pāo zhuān	1
+潜水	qián shuǐ	1
+犬科	quǎn kē	1
+人参公鸡	rén shēn gōng jī	1
+日泛儿	rì fàn ér	1
+扫楼	sǎo lóu	1
+沙发	shā fā	1
+刷屏	shuā píng	1
+水蒸气	shuǐ zhēng qì	1
+踢一脚	tī yì jiǎo	1
+调教	tiáo jiào	1
+停车做爱	tíng chē zuò ài	1
+同人	tóng rén	1
+王道	wáng dào	1
+我顶	wǒ dǐng	1
+稀饭	xī fàn	1
+小白	xiǎo bái	1
+小强	xiǎo qiáng	1
+兄贵	xiōng guì	1
+椅子	yǐ zi	1
+幼齿	yòu chǐ	1
+油墨	yóu mò	1
+诱受	yòu shòu	1
+御姐	yù jiě	1
+正太攻	zhèng tài gōng	1
+抓狂	zhuā kuáng	1
+总攻	zǒng gōng	1
+总受	zǒng shòu	1

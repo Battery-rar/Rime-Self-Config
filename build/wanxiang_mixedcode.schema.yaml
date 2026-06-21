@@ -1,12 +1,12 @@
 __build_info:
   rime_version: 1.16.0
   timestamps:
-    default: 1781532090
-    default.custom: 1781534526
-    wanxiang_algebra: 1781532090
+    default: 1781802923
+    default.custom: 1782026269
+    wanxiang_algebra: 1781802923
     wanxiang_algebra.custom: 0
     wanxiang_mixedcode.custom: 1777885927
-    wanxiang_mixedcode.schema: 1781532090
+    wanxiang_mixedcode.schema: 1781802923
 engine:
   filters:
     - uniquifier

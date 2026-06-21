@@ -1,8 +1,16 @@
 __build_info:
   rime_version: 1.16.0
   timestamps:
-    default: 1781532090
-    default.custom: 1781534526
+    default: 1781802923
+    default.custom: 1782026269
+ascii_composer:
+  good_old_caps_lock: true
+  switch_key:
+    Caps_Lock: noop
+    Control_L: noop
+    Control_R: noop
+    Shift_L: noop
+    Shift_R: noop
 config_version: LTS
 key_binder:
   bindings:
